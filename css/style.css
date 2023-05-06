@@ -33,9 +33,8 @@ header{
 .menu-button{
     font-size: 20px;
 }
-.menu-text{
-    display: flex;
-    justify-content: space-between;
+.menu-drop{
+    width: 350px;
 }
 .name-page{
     font-weight: bold;
@@ -48,8 +47,10 @@ header{
             max-width: 400px;
             text-align: center;
 }
-.menu{
-    text-transform: uppercase;
+.menu-text{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .main-card{
    display: flex;
@@ -86,12 +87,17 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
 
 }
 .footer-item-size{
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     
+}
+.footer-item{
+    padding-bottom: 20px;
 }
 .video{
     display: flex;
@@ -100,7 +106,7 @@ footer{
     padding-bottom: 20px;
 }
 .video-item:hover, .footer-item:hover,
-.card-hover:hover {
+.card-hover:hover{
     transform: scale(1.2); /* Увеличиваем масштаб */
    }
 .video-background {
@@ -110,10 +116,7 @@ footer{
     padding: 5px;
    color: #fff;
 }
-.movement{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
+
 .card-games{
     padding-top: 40px;
     padding-bottom: 40px;
@@ -127,6 +130,30 @@ footer{
     background-color: #339999;
     font-size: 20px;
     color: #fff;
-    text-align: center;
-   height: 60px;
+    text-align: center;    
+}
+.card-container-item{
+padding: 20px;
+list-style: none;
+
+}
+
+@media screen and (min-width: 1200px){
+.card-container-item{
+    flex-basis: calc((100% - 90px) / 3);   
+}
+       
+}
+
+@media screen and (min-width: 768px){
+.card-container-item{ 
+    flex-basis: calc((100% - 60px) / 2);
+    width: 370px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
 }
